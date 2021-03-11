@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Page has been open for <code>{count}</code> seconds.
+          counter: <code>{count}</code>.
         </p>
       </header>
     </div>
