@@ -16,6 +16,12 @@ module.exports = {
     ],
     ,
     ['@snowpack/plugin-sass', { style: 'compressed' }],
+    [
+      '@snowpack/plugin-webpack',
+      // {
+
+      // },
+    ],
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -24,9 +30,9 @@ module.exports = {
   optimize: {
     /* Example: Bundle your final build: */
     // "bundle": true,
-    bundle: true,
-    minify: true,
-    target: 'es2017',
+    // bundle: true,
+    // minify: true,
+    // target: 'es2017',
   },
   packageOptions: {
     /* ... */

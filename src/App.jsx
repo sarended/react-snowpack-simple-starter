@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Update the count (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
+import Home from './pages/Home';
+import About from './pages/About';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          counter: <code>{count}</code>.
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
