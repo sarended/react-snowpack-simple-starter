@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="description" content="basic app" />
+    <meta name="robots" content="index, follow" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>basic app</title>
 
     <link rel="stylesheet" href="index.css" />
@@ -11,5 +14,24 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/dist/index.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('serviceWorker.js').then(
+            function (registration) {
+              // Registration was successful
+              // console.log(
+              //   'ServiceWorker registration successful with scope: ',
+              //   registration.scope
+              // );
+            },
+            function (err) {
+              // registration failed :(
+              // console.log('ServiceWorker registration failed: ', err);
+            }
+          );
+        });
+      }
+    </script>
   </body>
 </html>

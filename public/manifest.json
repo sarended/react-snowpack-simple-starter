@@ -1,0 +1,14 @@
+{
+  "name": "Maaxu",
+  "short_name": "Maaxu",
+  "author": "Sarended.ir",
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "permissions": ["notifications", "webRequest"],
+  "description": "Maaxu"
+}
